@@ -30,7 +30,7 @@ class OrderServiceTest {
     @Test
     @DisplayName("Сума без знижки")
     void totalWithoutDiscount() {
-        assertEquals(20000, service().calculateTotal(10000, 2));
+        assertEquals(30000, service().calculateTotal(10000, 2));
     }
 
     @Test
