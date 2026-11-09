@@ -57,5 +57,8 @@ jobs:
           java-version: '21'
           cache: maven
 
+      - name: Configure Docker API version for Testcontainers
+        run: echo "api.version=1.44" >> ~/.docker-java.properties
+
       - name: Run integration tests (Testcontainers + PostgreSQL)
         run: mvn -B test -Pregression
